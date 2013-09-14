@@ -5,7 +5,7 @@
   <head>
         <title>BIND DNS Management Application </title>
         <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-        <c:url var="cssUrl" value="/css/bootstrap.css"/>
+        <c:url var="cssUrl" value="/resources/css/bootstrap.css"/>
         <link href="${cssUrl}" rel="stylesheet"/>
         <style>
           body {
