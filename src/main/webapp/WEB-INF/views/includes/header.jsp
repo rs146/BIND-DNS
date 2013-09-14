@@ -22,19 +22,19 @@
       <div id="nav-bar" class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
-                <c:url var="welcomeUrl" value="/" />
-                <a class="brand" href="${welcomeUrl}">myCalendar</a>
+                <c:url var="homeUrl" value="/" />
+                <a class="brand" href="${homeUrl}">BIND DNS Manager</a>
                 <div class="nav-collapse">
                     <ul class="nav">
-                        <li><a id="navWelcomeLink" href="${welcomeUrl}">Welcome</a></li>
-                        <c:url var="eventsUrl" value="/events/" />
-                        <li><a id="navEventsLink" href="${eventsUrl}">All Events</a></li>
-                        <c:url var="myEventsUrl" value="/events/my" />
-                        <li><a id="navMyEventsLink" href="${myEventsUrl}">My Events</a></li>
-                        <c:url var="createEventUrl" value="/events/form" />
-                        <li><a id="navCreateEventLink" href="${createEventUrl}">Create Event</a></li>
-                        <c:url var="h2ConsoleUrl" value="/admin/h2" />
-                        <li><a id="navH2Link" href="${h2ConsoleUrl}">H2</a></li>
+                        <li><a id="navHomeLink" href="${homeUrl}">BIND-DNS Manager</a></li>
+                        <c:url var="networksUrl" value="/networks/" />
+                        <li><a id="navNetworksLink" href="${networksUrl}">Networks</a></li>
+                        <c:url var="nameServersUrl" value="/name-servers" />
+                        <li><a id="navNameServersLink" href="${nameServersUrl}">Name Servers</a></li>
+                        <c:url var="resourceRecordsUrl" value="/resource-records" />
+                        <li><a id="navResourceRecordsLink" href="${resourceRecordsUrl}">Resource Records</a></li>
+                        <c:url var="adminUrl" value="/admin/" />
+                        <li><a id="navAdminLink" href="${adminUrl}">Administration</a></li>
                     </ul>
                 </div>
                 <div id="nav-account" class="nav-collapse pull-right">
@@ -47,8 +47,6 @@
                                 <li><a id="navLogoutLink" href="${logoutUrl}">Logout</a></li>
                             </c:when>
                             <c:otherwise>
-                                <c:url var="signupUrl" value="/signup/form"/>
-                                <li><a id="navSignupLink" href="${signupUrl}">Signup</a></li>
                                 <c:url var="loginUrl" value="/login/form"/>
                                 <li><a id="navLoginLink" href="${loginUrl}">Login</a></li>
                             </c:otherwise>
