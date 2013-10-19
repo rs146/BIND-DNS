@@ -1,10 +1,19 @@
 package com.blackcrowsys.domain;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "users")
 public class User {
 	private Integer id;
 	private String login;
 	private String password;
 
+	@Id
+	@Column(name = "id")
 	public Integer getId() {
 		return id;
 	}
@@ -13,6 +22,7 @@ public class User {
 		this.id = id;
 	}
 
+	@Column(name = "login")
 	public String getLogin() {
 		return login;
 	}
@@ -21,6 +31,7 @@ public class User {
 		this.login = login;
 	}
 
+	@Column(name = "password")
 	public String getPassword() {
 		return password;
 	}
