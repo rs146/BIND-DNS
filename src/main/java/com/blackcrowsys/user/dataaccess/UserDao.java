@@ -30,11 +30,11 @@ public interface UserDao {
 	public User findUser(String username);
 
 	/**
-	 * Save or update user.
+	 * Save a user.
 	 * 
 	 * @param user the user
 	 */
-	public void saveOrUpdateUser(User user);
+	public void saveUser(User user);
 
 	/**
 	 * Delete a user from the database.
