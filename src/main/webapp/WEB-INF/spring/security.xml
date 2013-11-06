@@ -36,8 +36,8 @@
                 logout-success-url="/login/form?logout"/>
     </http>
     <authentication-manager>
-        <authentication-provider>
-        	<jdbc-user-service id="userDetailsService" data-source-ref="dataSource"/>
+        <authentication-provider user-service-ref="userDetailsService">
+        	<password-encoder hash="sha"/>
         </authentication-provider>
     </authentication-manager>
 </bean:beans>
