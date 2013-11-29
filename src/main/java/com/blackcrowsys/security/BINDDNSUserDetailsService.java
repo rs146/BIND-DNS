@@ -9,8 +9,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import com.blackcrowsys.dataaccess.user.UserDao;
 import com.blackcrowsys.domain.User;
-import com.blackcrowsys.user.dataaccess.UserDao;
 
 /**
  * 
@@ -58,6 +58,7 @@ public class BINDDNSUserDetailsService implements UserDetailsService {
 			setId(user.getId());
 			setUsername(user.getUsername());
 			setPassword(user.getPassword());
+			setRoles(user.getRoles());
 		}
 
 		public Collection<? extends GrantedAuthority> getAuthorities() {

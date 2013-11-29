@@ -32,7 +32,7 @@
                         <li><a id="navNameServersLink" href="${nameServersUrl}">Name Servers</a></li>
                         <c:url var="resourceRecordsUrl" value="/resource-records" />
                         <li><a id="navResourceRecordsLink" href="${resourceRecordsUrl}">Resource Records</a></li>
-                        <c:url var="adminUrl" value="/admin/" />
+                        <c:url var="adminUrl" value="/admin" />
                         <li><a id="navAdminLink" href="${adminUrl}">Administration</a></li>
                     </ul>
                 </div>

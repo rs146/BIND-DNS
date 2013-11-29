@@ -1,6 +1,8 @@
-package com.blackcrowsys.user.dataaccess;
+package com.blackcrowsys.dataaccess.user;
 
 import java.util.List;
+
+import org.springframework.transaction.annotation.Transactional;
 
 import com.blackcrowsys.domain.User;
 
@@ -11,6 +13,7 @@ public interface UserDao {
 	 * 
 	 * @return list of users
 	 */
+	@Transactional(readOnly = true)
 	public List<User> findAllUsers();
 
 	/**
@@ -19,6 +22,7 @@ public interface UserDao {
 	 * @param id user id
 	 * @return User user
 	 */
+	@Transactional(readOnly = true)
 	public User findUser(Integer id);
 
 	/**
@@ -27,6 +31,7 @@ public interface UserDao {
 	 * @param username the username to be searched
 	 * @return User user
 	 */
+	@Transactional(readOnly = true)
 	public User findUser(String username);
 
 	/**
@@ -34,6 +39,7 @@ public interface UserDao {
 	 * 
 	 * @param user the user
 	 */
+	@Transactional
 	public void saveUser(User user);
 
 	/**
@@ -41,6 +47,7 @@ public interface UserDao {
 	 * 
 	 * @param user the user
 	 */
+	@Transactional
 	public void deleteUser(User user);
 
 }

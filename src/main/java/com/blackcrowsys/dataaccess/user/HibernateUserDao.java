@@ -1,4 +1,4 @@
-package com.blackcrowsys.user.dataaccess;
+package com.blackcrowsys.dataaccess.user;
 
 import java.util.List;
 
