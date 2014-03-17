@@ -4,6 +4,8 @@
     xmlns="http://www.springframework.org/schema/security"
     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
         http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+        
+    <bean:import resource="./applicationContext.xml"/>
 
     <http pattern="/resources/**" security="none"/>
     <http auto-config="true" use-expressions="true">
@@ -22,7 +24,7 @@
         <intercept-url pattern="/resource-records/**"
         		access="hasRole('ROLE_USER')"/>
         <intercept-url pattern="/admin/**"
-                access="hasRole('ROLE_ADMIN')"/>
+                access="hasRole('ROLE_ADMIN') and fullyAuthenticated"/>
         <intercept-url pattern="/**"
                 access="hasRole('ROLE_USER')"/>
         <access-denied-handler error-page="/login/form"/>
@@ -32,6 +34,7 @@
                 password-parameter="password"
                 authentication-failure-url="/login/form?error"
                 default-target-url="/default"/>
+        <remember-me key="bindDNS" data-source-ref="dataSource"/>
         <logout logout-url="/logout"
                 logout-success-url="/login/form?logout"/>
     </http>

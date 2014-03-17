@@ -26,7 +26,7 @@
                 <a class="brand" href="${homeUrl}">BIND DNS Manager</a>
                 <div class="nav-collapse">
                     <ul class="nav">
-                        <c:url var="networksUrl" value="/networks/" />
+                        <c:url var="networksUrl" value="/networks" />
                         <li><a id="navNetworksLink" href="${networksUrl}">Networks</a></li>
                         <c:url var="nameServersUrl" value="/name-servers" />
                         <li><a id="navNameServersLink" href="${nameServersUrl}">Name Servers</a></li>

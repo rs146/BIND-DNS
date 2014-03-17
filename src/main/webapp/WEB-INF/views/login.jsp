@@ -20,10 +20,17 @@
 	<c:if test="${param.logout != null}">
 		<div class="alert alert-success">You have been logged out.</div>
 	</c:if>
-	<label for="username">Username</label> <input type="text" id="username"
-		name="username" /> <label for="password">Password</label> <input
-		type="password" id="password" name="password" />
-	<div class="form-actions">
+	<label for="username">Username</label> 
+	<input type="text" id="username" name="username" /> 
+	
+	<label for="password">Password</label>
+	<p>
+		<input type="password" id="password" name="password" />
+	
+		<label for="remember">Remember Me?</label>
+		<input type="checkbox" id="remember" name="_spring_security_remember_me" value="true" />
+		<div class="form-actions">
+	</p>
 		<input id="submit" class="btn" name="submit" type="submit"
 			value="Login" />
 	</div>
